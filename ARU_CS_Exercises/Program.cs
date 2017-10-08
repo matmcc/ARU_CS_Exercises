@@ -20,7 +20,7 @@ namespace HelloWorld
     }
     */
 
-    class CountUp
+    /*class CountUp
     {
         static void Main(string[] args)
         {
@@ -33,6 +33,18 @@ namespace HelloWorld
             counter += 1.6;
             Console.WriteLine($"Current total is {counter}");
             Console.ReadLine();
+        }
+    }*/
+
+    class WelcomeMsg
+    {
+        static void Main(string[] args)
+        {
+            string name;
+            Console.WriteLine("Please enter your name:");
+            name = Console.ReadLine();
+            Console.WriteLine($"Hello {name}, welcome to ARU");
+            Console.Read();
         }
     }
 }
