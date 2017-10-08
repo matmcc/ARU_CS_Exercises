@@ -40,11 +40,27 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            string name;
+            string name, course;
             Console.WriteLine("Please enter your name:");
             name = Console.ReadLine();
             Console.WriteLine($"Hello {name}, welcome to ARU");
-            Console.Read();
+            //Console.Read();
+
+            Console.WriteLine("... and which course are you studying?");
+            course = Console.ReadLine();
+
+            string[] cs = { "computerscience", "cs", "informationandcommunicationtechnology", "ict" };
+            if (cs.Contains(course.Replace(" ", "").ToLower())) // if course in string return course.ToBinary()
+            {
+                StringBuilder binaryMsg = new StringBuilder();
+                course = "Welcome to the " + course + " course";
+                foreach (char c in course)
+                {
+                    binaryMsg.Append(Convert.ToString(c, 2));
+                }
+                Console.WriteLine(binaryMsg);
+            }
+            else { Console.WriteLine($"Welcome to the {course} course"); }
         }
     }
 }
