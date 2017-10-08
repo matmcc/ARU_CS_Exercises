@@ -24,13 +24,13 @@ namespace HelloWorld
     {
         static void Main(string[] args)
         {
-            int counter = 0;
+            double counter = 0;
             Console.WriteLine($"Current total is {counter}");
-            counter += 2;
+            counter += 2.2;
             Console.WriteLine($"Current total is {counter}");
-            counter += 1;
+            counter += 2.5;
             Console.WriteLine($"Current total is {counter}");
-            counter++;
+            counter += 1.6;
             Console.WriteLine($"Current total is {counter}");
             Console.ReadLine();
         }
