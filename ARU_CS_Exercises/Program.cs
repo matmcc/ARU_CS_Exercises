@@ -36,7 +36,7 @@ namespace HelloWorld
         }
     }*/
 
-    class WelcomeMsg
+    /*class WelcomeMsg
     {
         static void Main(string[] args)
         {
@@ -62,5 +62,5 @@ namespace HelloWorld
             }
             else { Console.WriteLine($"Welcome to the {course} course"); }
         }
-    }
+    }*/
 }
