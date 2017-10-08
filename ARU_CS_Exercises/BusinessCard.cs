@@ -10,7 +10,7 @@ namespace ARU_CS_Exercises
     {
         protected string name, num, employer;
         protected int width, height, PAD_SIZE;
-
+        // TODO: Constructor???
 
         private void BusinessCardInput()
         {
@@ -35,18 +35,43 @@ namespace ARU_CS_Exercises
             width = c + PAD_SIZE;
 
             // height = array.length(of_above_things) + padding
-            height = stuff.Length + PAD_SIZE;
+            height = stuff.Length + (2*PAD_SIZE);            
+        }
 
-            // if topline or bottomline print horizontal line of border char
-            // else print (first char = border char) + (padded input) + (last char = border char)
-            
+        private void BusinessCardWriter()
+        {
+            for (int i = 0; i < height+1; i++)
+            {
+                if (i == 0 || i == (height))    // if topline or bottomline print horizontal line of border char
+                {
+                    Console.WriteLine(new String('+', width + PAD_SIZE));
+                }
+                else if (i < PAD_SIZE || i > height - PAD_SIZE)   // else print (first char = border char) + (padded input) + (last char = border char)
+                {
+                    Console.Write("+");
+                    Console.Write("+\n".PadLeft(width + PAD_SIZE, ' '));
+                }
+                else if (i == PAD_SIZE)
+                {
+                    Console.WriteLine("+" + name.PadLeft(name.Length + (width - name.Length)/2, ' ').PadRight(width, ' ') + "+");
+                }
+                else if (i == PAD_SIZE + 1)
+                {
+                    Console.WriteLine("+" + num.PadLeft(num.Length + (width - num.Length) / 2, ' ').PadRight(width, ' ') + "+");
+                }
+                else if (i == PAD_SIZE + 2)
+                {
+                    Console.WriteLine("+" + employer.PadLeft(employer.Length + (width - employer.Length) / 2, ' ').PadRight(width, ' ') + "+");
+                }
+            }
         }
 
         static void Main(string[] args)
         {
             var bc = new BusinessCard();
             bc.BusinessCardInput();
-            Console.WriteLine($"{bc.name}, {bc.num}, {bc.employer}, {bc.width}, {bc.height}");
+            bc.BusinessCardWriter();
+            // Console.WriteLine($"{bc.name}, {bc.num}, {bc.employer}, {bc.width}, {bc.height}");
         }
     }
 }
