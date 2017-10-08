@@ -8,39 +8,45 @@ namespace ARU_CS_Exercises
 {
     class BusinessCard
     {
-        static void BusinessCardWriter()
+        protected string name, num, employer;
+        protected int width, height, PAD_SIZE;
+
+
+        private void BusinessCardInput()
         {
             // Get name, number, business
             Console.WriteLine("Please enter your name:");
-            var name = Console.ReadLine();
+            name = Console.ReadLine();
             Console.WriteLine("Can I have your number?");
-            var num = Console.ReadLine();
+            num = Console.ReadLine();
             Console.WriteLine("Who is your employer?");
-            var employer = Console.ReadLine();
+            employer = Console.ReadLine();
 
-            object[] stuff = { name, num, employer };
+            string[] stuff = { name, num, employer };
 
             // width = Max(Length(name, number, business)) + whitespace_padding
             int c = 0;
-            int PADDING_SIZE = 2;
-            foreach (var thing in stuff)
+            PAD_SIZE = 2;
+            foreach (string thing in stuff)
             {
-                if (thing.ToString().Length > c)
-                { c = thing.ToString().Length; }
+                if (thing.Length > c)
+                { c = thing.Length; }
             }
-            int width = c + PADDING_SIZE;
+            width = c + PAD_SIZE;
 
             // height = array.length(of_above_things) + padding
-            int height = stuff.Length + PADDING_SIZE;
+            height = stuff.Length + PAD_SIZE;
 
             // if topline or bottomline print horizontal line of border char
             // else print (first char = border char) + (padded input) + (last char = border char)
-
+            
         }
 
         static void Main(string[] args)
         {
-            BusinessCard.BusinessCardWriter();
+            var bc = new BusinessCard();
+            bc.BusinessCardInput();
+            Console.WriteLine($"{bc.name}, {bc.num}, {bc.employer}, {bc.width}, {bc.height}");
         }
     }
 }
