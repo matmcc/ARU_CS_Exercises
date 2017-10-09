@@ -43,6 +43,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BusinessCard.cs" />
+    <Compile Include="Paint.cs" />
+    <Compile Include="PaintWindow.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RetirementPlanner.cs" />

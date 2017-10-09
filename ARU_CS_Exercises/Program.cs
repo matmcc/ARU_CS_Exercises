@@ -72,12 +72,24 @@ namespace ARU_CS_Exercises
         }
     }*/
 
-    class RunRetirementPlanner
+    /*class RunRetirementPlanner
     {
 
         static void Main(string[] args)
         {
             var r = new RetirementPlanner();
+        }
+    }*/
+
+    class PaintProblem
+    {
+        static void Main(string[] args)
+        {
+            var room = new Paint(12, 10, 8, 2);
+            int numTins = room.GetNumTins();
+            Console.WriteLine($"To paint a room with dimensions {room.Length}m long, " +
+                $"{room.Width}m wide, {room.Height}m high, and with the windows defined, " +
+                $"you will need {numTins} tins of paint");
         }
     }
 }
