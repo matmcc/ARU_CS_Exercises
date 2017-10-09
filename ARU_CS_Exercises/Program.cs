@@ -64,11 +64,20 @@ namespace ARU_CS_Exercises
         }
     }*/
 
-    class RunBusinessCard
+    /*class RunBusinessCard
     {
         static void Main(string[] args)
         {
             BusinessCard.Run();
+        }
+    }*/
+
+    class RunRetirementPlanner
+    {
+
+        static void Main(string[] args)
+        {
+            var r = new RetirementPlanner();
         }
     }
 }
