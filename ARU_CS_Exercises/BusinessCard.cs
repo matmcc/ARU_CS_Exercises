@@ -38,7 +38,7 @@ namespace ARU_CS_Exercises
             height = stuff.Length + (2*PAD_SIZE);            
         }
 
-        private void BusinessCardWriter()
+        private void BusinessCardWriter()   // horrible code
         {
             for (int i = 0; i < height+1; i++)
             {
@@ -66,7 +66,7 @@ namespace ARU_CS_Exercises
             }
         }
 
-        static void Main(string[] args)
+        public static void Run()
         {
             var bc = new BusinessCard();
             bc.BusinessCardInput();

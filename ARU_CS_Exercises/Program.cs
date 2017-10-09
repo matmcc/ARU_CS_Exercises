@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HelloWorld
+namespace ARU_CS_Exercises
 {
     /*
     class HelloWorld
@@ -63,4 +63,12 @@ namespace HelloWorld
             else { Console.WriteLine($"Welcome to the {course} course"); }
         }
     }*/
+
+    class RunBusinessCard
+    {
+        static void Main(string[] args)
+        {
+            BusinessCard.Run();
+        }
+    }
 }
