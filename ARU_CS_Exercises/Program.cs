@@ -63,32 +63,19 @@ namespace ARU_CS_Exercises
             else { Console.WriteLine($"Welcome to the {course} course"); }
         }
     }*/
-
-    /*class RunBusinessCard
+    
+    class RunIt
     {
         static void Main(string[] args)
         {
-            BusinessCard.Run();
-        }
-    }*/
+            //BusinessCard.Run();
 
-    /*class RunRetirementPlanner
-    {
+            // var r = new RetirementPlanner();
 
-        static void Main(string[] args)
-        {
-            var r = new RetirementPlanner();
-        }
-    }*/
-
-    class PaintProblem
-    {
-        static void Main(string[] args)
-        {
             var room = new Paint(12, 10, 8, 2);
             int numTins = room.GetNumTins();
             Console.WriteLine($"To paint a room with dimensions {room.Length}m long, " +
-                $"{room.Width}m wide, {room.Height}m high, and with the windows defined, " +
+                $"{room.Width}m wide, {room.Height}m high,\n and with the windows defined, " +
                 $"you will need {numTins} tins of paint");
         }
     }
